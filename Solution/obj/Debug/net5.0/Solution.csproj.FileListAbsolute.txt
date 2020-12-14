@@ -1,0 +1,16 @@
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.exe
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.deps.json
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.runtimeconfig.json
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.runtimeconfig.dev.json
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.dll
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\ref\Solution.dll
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\bin\Debug\net5.0\Solution.pdb
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.csprojAssemblyReference.cache
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.AssemblyInfoInputs.cache
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.AssemblyInfo.cs
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.csproj.CoreCompileInputs.cache
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.dll
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\ref\Solution.dll
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.pdb
+c:\Users\i7pc\OneDrive\Projects\C#\Solution\obj\Debug\net5.0\Solution.genruntimeconfig.cache
