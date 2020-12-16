@@ -1,0 +1,142 @@
+﻿using System;
+using System.IO;
+using System.Text.RegularExpressions;
+
+namespace Password_Philosophy
+{
+    class ScanPass {
+
+        // Function to find the first password policy integer of each line.
+        public static int convertToInt(string str, int x, int y) {
+            // First and second index of the line.
+            var firstCharInt = str[x];
+            var secondCharInt = str[y];
+
+            // Convert the found integers to strings.
+            string firstCharStr = firstCharInt.ToString();
+            string secondCharStr = secondCharInt.ToString();
+            // Add both characters together to create the whole number.
+            string both = firstCharStr + secondCharStr;
+
+            // Replace all non integers with nothing.
+            string result = Regex.Replace(both, @"[^\d]", "");
+            int finalChar;
+            
+            // convert the final string to an integer so we can perfrom mathematical operations.
+            finalChar = int.Parse(result);
+            return(finalChar);
+        }
+
+        // Function to find the second password policy integer of each line.
+        public static int convertToThreeInt(string str, int x, int y, int n) {
+            // Find the three given index's of the line to find the second integer.
+            var firstCharInt = str[x];
+            var secondCharInt = str[y];
+            var thirdCharInt = str[n];
+
+            // Convert all found integers to strings.
+            string firstCharStr = firstCharInt.ToString();
+            string secondCharStr = secondCharInt.ToString();
+            string thirdCharStr = thirdCharInt.ToString();
+            // Add all the strings together to get the whole numeber.
+            string both = firstCharStr + secondCharStr + thirdCharStr;
+
+            // Replace all non integers with nothing.
+            string result = Regex.Replace(both, @"[^\d]", "");
+            int finalChar;
+            
+            // Convert the final string to an integer.
+            finalChar = int.Parse(result);
+            return(finalChar);
+        }
+
+        // Function to find the letter to match against the password in the current line.
+        public static string findLetterType(string str, int x, int y, int n) {
+            // Find the three given index's of the line to find the letter.
+            var firstCharInt = str[x];
+            var secondCharInt = str[y];
+            var thirdCharInt = str[n];
+
+            // Convert the found Characters to strings so they can be added together.
+            string firstCharStr = firstCharInt.ToString();
+            string secondCharStr = secondCharInt.ToString();
+            string thirdCharStr = thirdCharInt.ToString();
+            // Add all the strings together.
+            string both = firstCharStr + secondCharStr + thirdCharStr;
+
+            // Replace all non letters with nothing.
+            string result = Regex.Replace(both, @"[^a-zA-Z]", "");
+            return(result);
+        }
+
+        // This is the function that checks the policy and counts how many passwords are valid.
+        public void checkPass() {
+            // Read all the lines of the data file.
+            var readData = System.IO.File.ReadAllLines(@"data.txt");
+            // Initiate a new Random object.
+            Random random = new Random();
+
+            // This variable keeps track of how many passwords are valid.
+            int mainCount = 0;
+
+            // For each line in the data file.
+            foreach (var lineRead in readData) {
+                // Find the first policy integer.
+                int firstInt = convertToInt(lineRead, 0, 1);
+                // Find the second Policy integer.
+                int secondInt = convertToThreeInt(lineRead, 2, 3, 4);
+
+                // Find the policy letter.
+                string letterType = findLetterType(lineRead, 4, 5, 6);
+
+                // This variable keeps track of how many times the policy letter occurs in the current line.
+                int count = 0;
+
+                // For loop that iterates through each character of the line.
+                for(int n = 0; n!=lineRead.Length; n++) {
+                    // Converts the index of 'n' in the line to a string to it can be compared to the policy integer.
+                    string currString = lineRead[n].ToString();
+
+                    // If the policy letter is equal to the current index of the line then increment count by one.
+                    if (letterType == currString) {
+                        count++;
+                    }
+
+                    // If the policy letter is not equal to the current index of the line, continue.
+                    else {
+                        continue;
+                    }
+                }
+
+                // Subtract 1 from count, to account for the policy letter in the line.
+                count = count - 1;
+
+                // If count is >=  first policy integer and count <= second policy integer then increment the maincount by 1.
+                if (count>=firstInt && count<=secondInt) {
+                    mainCount++;
+                }
+
+                // If count does not meet the password policy, continue.
+                else {
+                    continue;
+                }
+            }
+
+            Console.WriteLine(mainCount);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a new ScanPass object.
+            var ScanPass = new ScanPass();
+            // Call the checkPass function.
+            ScanPass.checkPass();
+        }
+    }
+
+}
+
