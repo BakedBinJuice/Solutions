@@ -69,6 +69,54 @@ namespace Password_Philosophy
             return(result);
         }
 
+        public int part2() {
+            // Read the data from the file.
+            var readData = System.IO.File.ReadAllLines(@"data.txt");
+
+            int invalid = 0;
+            int valid = 0;
+
+            // Loop over each line of the file.
+            foreach(var lineRead in readData) {
+                // Find the given index positions of each line.
+                int firstInt = convertToInt(lineRead, 0, 1);
+                int secondInt = convertToThreeInt(lineRead, 2, 3, 4);
+
+                // Find the given character of each line and convert to a character.
+                var letterType = findLetterType(lineRead, 4, 5, 6);
+                char letterTypeChar = letterType[0];
+
+                // Strip line of all non alphanumerical characters.
+                string result = Regex.Replace(lineRead, @"[^a-zA-Z]", "");
+
+                // Contain the indexed characters in variables.
+                char firstChar = result[firstInt];
+                char secondChar = result[secondInt];
+
+                // If the first indexed character is equal to the character type but the second index position is not equal, password is valid.
+                if (firstChar == letterTypeChar && secondChar != letterTypeChar) {
+                    valid++;
+                }
+
+                // If the first indexed character is not equal to the character type but the second indexed character is equal, password is valid.
+                else if (firstChar != letterTypeChar && secondChar == letterTypeChar) {
+                    valid++;
+                }
+
+                // If the password does not follow the policy, it is invalid.
+                else {
+                    invalid++;
+                }
+            }
+
+            return valid;
+        }
+
+        private int convertToInt(int v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
+
         // This is the function that checks the policy and counts how many passwords are valid.
         public void checkPass() {
             // Read all the lines of the data file.
@@ -122,7 +170,11 @@ namespace Password_Philosophy
                 }
             }
 
+            Console.WriteLine("Part 1 answer: ");
             Console.WriteLine(mainCount);
+            Console.WriteLine("Part 2 answer: " );
+            var answer = part2();
+            Console.WriteLine(answer);
         }
     }
 
