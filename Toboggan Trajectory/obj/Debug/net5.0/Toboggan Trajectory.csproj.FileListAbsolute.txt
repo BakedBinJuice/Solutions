@@ -1,0 +1,16 @@
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.exe
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.deps.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.runtimeconfig.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.runtimeconfig.dev.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\ref\Toboggan Trajectory.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\bin\Debug\net5.0\Toboggan Trajectory.pdb
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.csprojAssemblyReference.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.AssemblyInfoInputs.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.AssemblyInfo.cs
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.csproj.CoreCompileInputs.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\ref\Toboggan Trajectory.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.pdb
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Toboggan Trajectory\obj\Debug\net5.0\Toboggan Trajectory.genruntimeconfig.cache
