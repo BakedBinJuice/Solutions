@@ -1,0 +1,16 @@
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.exe
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.deps.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.runtimeconfig.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.runtimeconfig.dev.json
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\ref\Passport Processing.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\bin\Debug\net5.0\Passport Processing.pdb
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.csprojAssemblyReference.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.AssemblyInfoInputs.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.AssemblyInfo.cs
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.csproj.CoreCompileInputs.cache
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\ref\Passport Processing.dll
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.pdb
+C:\Users\i7pc\OneDrive\Projects\C#\Solutions\Solutions\Passport Processing\obj\Debug\net5.0\Passport Processing.genruntimeconfig.cache
