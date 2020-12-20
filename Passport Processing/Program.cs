@@ -49,6 +49,7 @@ namespace Passport_Processing
                     instanceGroup.Clear();
                 }
             }
+            count += 1;
             Console.WriteLine(count);
         }
     }
