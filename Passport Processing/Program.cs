@@ -49,6 +49,19 @@ namespace Passport_Processing
                     instanceGroup.Clear();
                 }
             }
+            if (instanceGroup.Count == criterea.Length)
+            {
+                count++;
+                //Console.WriteLine(count);
+            }
+            else if (instanceGroup.Count == 7)
+            {
+                if (instanceGroup.Contains("cid") == false)
+                {
+                    count++;
+                    //Console.WriteLine(count);
+                }
+            }
             Console.WriteLine(count);
         }
     }
