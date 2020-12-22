@@ -27,7 +27,129 @@ namespace Passport_Processing
                             int y = n - 2;
                             int z = n - 1;
                             string instance = readLine[x].ToString() + readLine[y].ToString() + readLine[z].ToString();
-                            instanceGroup.Add(instance);
+                            //find byr - year
+                            if (instance == "byr" || instance == "iyr" || instance == "eyr")
+                            {
+                                int f;
+                                x = n + 4;
+                                y = n + 3;
+                                z = n + 2;
+                                f = n + 1;
+                                string byrstr = readLine[f].ToString() + readLine[z].ToString() + readLine[y].ToString() + readLine[x].ToString();
+                                int byr;
+                                int.TryParse(byrstr, out byr);
+                                if (instance == "byr")
+                                {
+                                    if (byr >= 1920 && byr <= 2002)
+                                    {
+                                        instanceGroup.Add(instance);
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }
+                                }
+                                else if (instance == "iyr")
+                                {
+                                    if (byr >= 2010 && byr <= 2020)
+                                    {
+                                        instanceGroup.Add(instance);
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }
+                                }
+                                else if (instance == "eyr")
+                                {
+                                    if (byr >= 2020 && byr <= 2030)
+                                    {
+                                        instanceGroup.Add(instance);
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }
+                                }
+                            }
+                            else if (instance == "hgt")
+                            {
+                                try
+                                {
+                                    int f;
+                                    int g;
+                                    int v;
+                                    v = n + 6;
+                                    x = n + 5;
+                                    y = n + 4;
+                                    z = n + 3;
+                                    f = n + 2;
+                                    g = n + 1;
+                                    string hgtstr = (readLine[g].ToString() + readLine[f].ToString() + readLine[z].ToString() + readLine[y].ToString() + readLine[x].ToString());
+                                    string hgttype = Regex.Replace(hgtstr, "[^a-zA-Z]", "");
+                                    string hgtval = Regex.Replace(hgtstr, "[^0-9]", "");
+                                    int hgtint;
+                                    Int32.TryParse(hgtval, out hgtint);
+                                    if (hgttype == "cm")
+                                    {
+                                        if (hgtint >= 150 && hgtint <= 193)
+                                        {
+                                            instanceGroup.Add(instance);
+                                        }
+                                    }
+                                    else if (hgttype == "in")
+                                    {
+                                        if (hgtint >= 59 && hgtint >= 76)
+                                        {
+                                            instanceGroup.Add(instance);
+                                        }
+                                    }
+                                }
+                                catch (System.IndexOutOfRangeException)
+                                {
+                                    try
+                                    {
+                                        int f;
+                                        int g;
+                                        y = n + 4;
+                                        z = n + 3;
+                                        f = n + 2;
+                                        g = n + 1;
+                                        string hgtstr = (readLine[g].ToString() + readLine[f].ToString() + readLine[z].ToString() + readLine[y].ToString());
+                                        string hgttype = Regex.Replace(hgtstr, "[^a-zA-Z]", "");
+                                        string hgtval = Regex.Replace(hgtstr, "[^0-9]", "");
+                                        int hgtint;
+                                        Int32.TryParse(hgtval, out hgtint);
+                                        if (hgttype == "cm")
+                                        {
+                                            if (hgtint >= 150 && hgtint <= 193)
+                                            {
+                                                instanceGroup.Add(instance);
+                                            }
+                                        }
+                                        else if (hgttype == "in")
+                                        {
+                                            if (hgtint >= 59 && hgtint >= 76)
+                                            {
+                                                instanceGroup.Add(instance);
+                                            }
+                                        }
+                                    }
+                                    catch (System.IndexOutOfRangeException)
+                                    {
+                                        continue;
+                                    }
+                                }
+                            }
+                            else if (instance == "hcl")
+                            {
+                                string hclstr = "";
+                                for (int h = n + 1; readLine[h] == ' ' || readLine[h] < readLine.Length; h++)
+                                {
+                                    hclstr += readLine[h].ToString();
+                                }
+                                Console.WriteLine(hclstr);
+                            }
                         }
                     }
                 }
