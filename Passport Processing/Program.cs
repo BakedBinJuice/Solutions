@@ -143,12 +143,64 @@ namespace Passport_Processing
                             }
                             else if (instance == "hcl")
                             {
+                                string alpha = "abcdef";
                                 string hclstr = "";
-                                for (int h = n + 1; readLine[h] == ' ' || readLine[h] < readLine.Length; h++)
+                                for (int h = n + 1; h <= n + 7 && h < readLine.Length; h++)
                                 {
                                     hclstr += readLine[h].ToString();
                                 }
-                                Console.WriteLine(hclstr);
+                                if (hclstr[0] == '#')
+                                {
+                                    string hclcore = Regex.Replace(hclstr, "[^a-zA-Z-^0-9]", "");
+                                    if (hclcore.Length == 6)
+                                    {
+                                        string hcllet = Regex.Replace(hclcore, "[^a-zA-Z]", "");
+                                        foreach (var letter in hcllet)
+                                        {
+                                            if (alpha.ToLower().Contains(letter))
+                                            {
+                                                continue;
+                                            }
+                                            else
+                                            {
+                                                instanceGroup.Clear();
+                                                break;
+                                            }
+                                        }
+                                        instanceGroup.Add(instance);
+                                    }
+                                }
+                            }
+                            else if (instance == "ecl")
+                            {
+                                string[] eyeList = { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
+                                x = n + 3;
+                                y = n + 2;
+                                z = n + 1;
+                                string ecl = readLine[z].ToString() + readLine[y].ToString() + readLine[x].ToString();
+                                foreach (var colour in eyeList)
+                                {
+                                    if (ecl == colour)
+                                    {
+                                        instanceGroup.Add(instance);
+                                    }
+                                }
+                            }
+                            else if (instance == "pid")
+                            {
+                                string pid = "";
+                                for (int j = n + 1; j < n + 10 && j < readLine.Length; j++)
+                                {
+                                    pid += readLine[j].ToString();
+                                }
+                                if (pid.Length == 9)
+                                {
+                                    string eclInts = Regex.Replace(pid, "[^0-9]", "");
+                                    if (eclInts.Length == 9)
+                                    {
+                                        instanceGroup.Add(instance);
+                                    }
+                                }
                             }
                         }
                     }
