@@ -202,6 +202,10 @@ namespace Passport_Processing
                                     }
                                 }
                             }
+                            else if (instance == "cid")
+                            {
+                                instanceGroup.Add(instance);
+                            }
                         }
                     }
                 }
