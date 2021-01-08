@@ -36,8 +36,6 @@ namespace Binary_Boarding
             double startRange = 0;
             double val = 127;
             decimal valDec = 127;
-            double staticStartRange = 0;
-            double staticEndRange = 127;
             for (int i = 0; i < input.Length; i++)
             {
                 val = System.Convert.ToDouble(valDec);
