@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Binary_Boarding
 {
@@ -33,6 +35,7 @@ namespace Binary_Boarding
             decimal rows = 0;
             decimal collumns = 0;
             var Readinput = System.IO.File.ReadAllLines(@"data.txt");
+            List<int> seatIDS = new List<int>();
             foreach (var input in Readinput)
             {
                 double startRange = 0;
@@ -86,8 +89,10 @@ namespace Binary_Boarding
                     }
                 }
                 decimal finalAnswer = rows * 8 + collumns;
-                Console.WriteLine(finalAnswer);
+                seatIDS.Add(Convert.ToInt32(finalAnswer));
             }
+            int maxNum = seatIDS.Max();
+            Console.WriteLine(maxNum);
         }
     }
     class Program
