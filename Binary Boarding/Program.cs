@@ -32,69 +32,62 @@ namespace Binary_Boarding
         {
             decimal rows = 0;
             decimal collumns = 0;
-            string input = "FBFBBFFRLR";
-            double startRange = 0;
-            decimal startRangeDec = 0;
-            double val = 127;
-            decimal valDec = 127;
-            double collumnRange = 0;
-            decimal collumnRangeDec = 0;
-            double collumnVal = 7;
-            decimal collumnValDec = 7;
-            for (int i = 0; i < input.Length; i++)
+            var Readinput = System.IO.File.ReadAllLines(@"data.txt");
+            foreach (var input in Readinput)
             {
-                if (input[i] == 'F' || input[i] == 'B')
+                double startRange = 0;
+                decimal startRangeDec = 0;
+                double val = 127;
+                decimal valDec = 127;
+                double collumnRange = 0;
+                decimal collumnRangeDec = 0;
+                double collumnVal = 7;
+                decimal collumnValDec = 7;
+                for (int i = 0; i < input.Length; i++)
                 {
-                    startRange = System.Convert.ToDouble(startRangeDec);
-                    val = System.Convert.ToDouble(valDec);
-                    decimal foundNum = findMidNum(input[i], startRange, val);
-                    if (input[i] == 'F')
+                    if (input[i] == 'F' || input[i] == 'B')
                     {
-                        valDec = System.Convert.ToDecimal(foundNum);
-                    }
-                    else if (input[i] == 'B')
-                    {
-                        startRangeDec = System.Convert.ToDecimal(foundNum);
-                    }
-                    if (startRangeDec == valDec)
-                    {
-                        Console.WriteLine(startRangeDec);
-                        rows = startRangeDec;
-                    }
-                    else 
-                    {
-                        Console.WriteLine(startRangeDec + " - " + valDec);
+                        startRange = System.Convert.ToDouble(startRangeDec);
+                        val = System.Convert.ToDouble(valDec);
+                        decimal foundNum = findMidNum(input[i], startRange, val);
+                        if (input[i] == 'F')
+                        {
+                            valDec = System.Convert.ToDecimal(foundNum);
+                        }
+                        else if (input[i] == 'B')
+                        {
+                            startRangeDec = System.Convert.ToDecimal(foundNum);
+                        }
+                        if (startRangeDec == valDec)
+                        {
+                            rows = startRangeDec;
+                        }
                     }
                 }
-            }
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (input[i] == 'L' || input[i] == 'R')
+                for (int i = 0; i < input.Length; i++)
                 {
-                    collumnRange = System.Convert.ToDouble(collumnRangeDec);
-                    collumnVal = System.Convert.ToDouble(collumnValDec);
-                    decimal foundNum = findMidNum(input[i], collumnRange, collumnVal);
-                    if (input[i] == 'L')
+                    if (input[i] == 'L' || input[i] == 'R')
                     {
-                        collumnValDec = System.Convert.ToDecimal(foundNum);
-                    }
-                    else if (input[i] == 'R')
-                    {
-                        collumnRangeDec = System.Convert.ToDecimal(foundNum);
-                    }
-                    if (collumnRangeDec == collumnValDec)
-                    {
-                        collumns = collumnRangeDec;
-                        Console.WriteLine(collumns);
-                    }
-                    else
-                    {
-                        Console.WriteLine(collumnRangeDec + " - " + collumnValDec);
+                        collumnRange = System.Convert.ToDouble(collumnRangeDec);
+                        collumnVal = System.Convert.ToDouble(collumnValDec);
+                        decimal foundNum = findMidNum(input[i], collumnRange, collumnVal);
+                        if (input[i] == 'L')
+                        {
+                            collumnValDec = System.Convert.ToDecimal(foundNum);
+                        }
+                        else if (input[i] == 'R')
+                        {
+                            collumnRangeDec = System.Convert.ToDecimal(foundNum);
+                        }
+                        if (collumnRangeDec == collumnValDec)
+                        {
+                            collumns = collumnRangeDec;
+                        }
                     }
                 }
+                decimal finalAnswer = rows * 8 + collumns;
+                Console.WriteLine(finalAnswer);
             }
-            decimal finalAnswer = rows * 8 + collumns;
-            Console.WriteLine(finalAnswer);
         }
     }
     class Program
