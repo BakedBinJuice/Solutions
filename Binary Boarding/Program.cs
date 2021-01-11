@@ -42,6 +42,7 @@ namespace Binary_Boarding
                 decimal startRangeDec = 0;
                 double val = 127;
                 decimal valDec = 127;
+
                 double collumnRange = 0;
                 decimal collumnRangeDec = 0;
                 double collumnVal = 7;
@@ -60,9 +61,6 @@ namespace Binary_Boarding
                         else if (input[i] == 'B')
                         {
                             startRangeDec = System.Convert.ToDecimal(foundNum);
-                        }
-                        if (startRangeDec == valDec)
-                        {
                             rows = startRangeDec;
                         }
                     }
@@ -81,9 +79,6 @@ namespace Binary_Boarding
                         else if (input[i] == 'R')
                         {
                             collumnRangeDec = System.Convert.ToDecimal(foundNum);
-                        }
-                        if (collumnRangeDec == collumnValDec)
-                        {
                             collumns = collumnRangeDec;
                         }
                     }
@@ -92,7 +87,22 @@ namespace Binary_Boarding
                 seatIDS.Add(Convert.ToInt32(finalAnswer));
             }
             int maxNum = seatIDS.Max();
-            Console.WriteLine(maxNum);
+            //Console.WriteLine(maxNum);
+
+            int mySeatID;
+            foreach (int initialSeatID in seatIDS)
+            {
+                foreach (int seatID2 in seatIDS)
+                {
+                    int seatID = initialSeatID;
+                    int real2 = seatID2;
+                    if (seatID - 1 == real2 + 1)
+                    {
+                        mySeatID = seatID - 1;
+                        Console.WriteLine(mySeatID);
+                    }
+                }
+            }
         }
     }
     class Program
