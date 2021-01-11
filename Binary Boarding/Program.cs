@@ -89,18 +89,21 @@ namespace Binary_Boarding
             int maxNum = seatIDS.Max();
             //Console.WriteLine(maxNum);
 
-            int mySeatID;
-            foreach (int initialSeatID in seatIDS)
+            seatIDS.Sort();
+            for (int i = 0; i < 851; i++)
             {
-                foreach (int seatID2 in seatIDS)
+                try
                 {
-                    int seatID = initialSeatID;
-                    int real2 = seatID2;
-                    if (seatID - 1 == real2 + 1)
+                    int seatID = seatIDS[i];
+                    int seatID2 = seatIDS[i+1];
+                    if (seatID+1 != seatID2)
                     {
-                        mySeatID = seatID - 1;
-                        Console.WriteLine(mySeatID);
+                        Console.WriteLine(seatID2);
                     }
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    continue;
                 }
             }
         }
